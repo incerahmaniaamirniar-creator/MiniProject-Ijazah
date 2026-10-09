@@ -6,8 +6,8 @@ Penjelasan Metode yang DigunakanDalam prototype ini, digunakan serangkaian pemro
 
 Analisis Hasil Pengujian:CLAHE (Paling Efektif): CLAHE menghasilkan tingkat akurasi tertinggi dengan nilai CER 0.0% pada hampir seluruh kondisi citra (termasuk Low Contrast, Faded, Color Shift, dan JPEG Compression). Pengecualian terjadi pada kondisi High Noise ekstrem di mana pembacaan OCR terganggu. CLAHE sangat efektif karena menyesuaikan kontras secara lokal sehingga karakter angka tetap tajam.   Grayscale Saja: Mampu mencapai CER 0.0% pada sampel beresolusi standar, namun tidak adaptif apabila diuji pada citra dengan pencahayaan yang sangat tidak merata atau pudar.   Histogram Equalization Global (Sangat Tidak Efektif): Menghasilkan nilai CER sangat buruk (> 80.0%) pada seluruh sampel. Metode global ini menaikkan kontras secara agresif pada seluruh area gambar, sehingga noise latar belakang kertas ikut membesar dan membingungkan mesin OCR.   Kesimpulan: Metode enhancement yang paling efektif adalah CLAHE, karena terbukti menjaga akurasi OCR (nilai CER terendah) secara stabil di berbagai variasi degradasi citra.
 
-**3. How to Run Code (Panduan Menjalankan Program)
-**
+**3. How to Run Code (Panduan Menjalankan Program)**
+   
 ### 1. Persiapan Environment
 1. Buka [Google Colab](https://colab.research.google.com/).
 2. Buat notebook baru (`.ipynb`) atau unggah file notebook yang ada di repository ini.
